@@ -19,6 +19,18 @@ function myFunction() {
     document.getElementById("TempCelsiusHere").innerHTML = Math.round(tempCelsius) + "°C";
     document.getElementById("CityHere").innerHTML = city;
     document.getElementById("ConditionHere").innerHTML = condition;
+
+    if (tempFahrenheit>=50) {
+        var pic = document.createElement("IMG");
+        pic.setAttribute("src", "/img/hot.jpg");
+        pic.setAttribute("alt", "hot");
+        document.body.appendChild(pic);
+    } else if (tempFahrenheit<50) {
+        var pic = document.createElement("IMG");
+        pic.setAttribute("src", "/img/cold.jpg");
+        pic.setAttribute("alt", "cold");
+        document.body.appendChild(pic);
+    }
   });  
 }
 
