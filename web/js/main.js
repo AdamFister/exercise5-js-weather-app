@@ -13,6 +13,9 @@ function myFunction() {
     let city = JSON.stringify(myJson.city.name);
     let condition = JSON.stringify(myJson.list[0].weather[0].description);
 
+    city = city.slice(1, -1);
+    condition = condition.slice(1, -1);
+
     let tempNumKelvin = parseFloat(tempKelvin);
     let tempFahrenheit = (tempNumKelvin - 273.15) * 9/5 + 32;
     let tempCelsius = tempNumKelvin - 273 ;
@@ -33,9 +36,9 @@ function myFunction() {
 
 function handleErrors(response) {
     if (!response.ok) {
-        throw document.getElementById("Error").innerHTML = "Please enter a valid zip code";
+        throw alert("Please enter a valid zip code");
     }
-    document.getElementById("Error").innerHTML = "";
+    //document.getElementById("Error").innerHTML = "";
     return response;
 }
 

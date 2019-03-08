@@ -11,15 +11,21 @@
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-        <input type="text" id="zipCode" value="12345">
+  <div class="container center">
+      <h1>WEATHER</h1>
+        <input type="text" id="zipCode" placeholder="12345">
+        
         <button onclick="myFunction()">Get Weather</button>
-        <p id="Error"></p>
+  </div>
+  <div class="container center">
+        <!-- <p id="Error"></p> -->
         <p id="CityHere"></p>
         <p id="TempKelvinHere"></p>
         <p id="TempFahrenheitHere"></p>
         <p id="TempCelsiusHere"></p>
         <p id="ConditionHere"></p>
         <img id="PictureHere" class="img-fluid" src="/img/weather.jpg">
+      </div>
 
       
     <!-- Optional JavaScript -->
